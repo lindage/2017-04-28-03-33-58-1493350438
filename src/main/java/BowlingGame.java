@@ -1,6 +1,6 @@
 public class BowlingGame {
 
-   private int getBowlingScore(String str) {
+   public int getBowlingScore(String str) {
         int score = 0;
         String[] shuang = str.split("\\|\\|");
         int lastBuChong = 0;
@@ -33,7 +33,7 @@ public class BowlingGame {
         return score;
     }
 
-    private int getGeSocre( String str1, String str2, String str3) {
+    public int getGeSocre( String str1, String str2, String str3) {
         int score = 0;
         if (str1.equals("X")&&str2.equals("X")){
             score+=20+getLastScore(str3);
@@ -49,7 +49,7 @@ public class BowlingGame {
         return score;
     }
 
-    private static int getSingle(char c) {
+    public static int getSingle(char c) {
         if (c=='-')
             return 0;
         else if (c=='X')
@@ -59,7 +59,7 @@ public class BowlingGame {
     }
 
 
-    private int getLastScore(String str) {
+    public int getLastScore(String str) {
         int lastScore = 0;
         if (str.length()==1){
             if (str.charAt(0)=='-')
